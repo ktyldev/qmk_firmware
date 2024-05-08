@@ -24,15 +24,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |----------+------+------+------+------+------| Hyper|           | Meh  |------+------+------+------+------+--------|
  * | LShift   |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |//Ctrl| RShift |
  * `----------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |Grv/L1|  '"  |AltShf| Left | LGui |                                       |  Up  | Down |   [  |   ]  | ~L1  |
+ *   |Grv/L1|  '"  | Shift| Alt  | LGui |                                       | AltGr | Alt |   [  |   ]  | ~L1  |
  *   `----------------------------------'                                       `----------------------------------'
- *                                        ,-------------.       ,-------------.
- *                                        | App  | Right|       | Alt  | BkSp |
- *                                 ,------|------|------|       |------+--------+------.
- *                                 |      |      | Home |       | PgUp |        |      |
- *                                 | Space|Backsp|------|       |------|  Del   |Enter |
- *                                 |      |ace   | End  |       | PgDn |        |      |
- *                                 `--------------------'       `----------------------'
+ *                                        ,-------------.       ,-----------.
+ *                                        | App  | Right|       | Down | Up |
+ *                                 ,------|------|------|       |------+------+-------.
+ *                                 |      |      | Home |       | PgUp |      |       |
+ *                                 | Space|Backsp|------|       |------|  Del | Enter |
+ *                                 |      |ace   | End  |       | PgDn |      |       |
+ *                                 `--------------------'       `---------------------'
  */
 [BASE] = LAYOUT_ergodox_pretty(
   // left hand
@@ -40,8 +40,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,          KC_Q,        KC_W,          KC_E,    KC_R,    KC_T,    TG(SYMB),             TG(SYMB),     KC_Y,    KC_U,    KC_I,    KC_O,              KC_P,           KC_BSLS,
   CTL_T(KC_ESC),   KC_A,        KC_S,          KC_D,    KC_F,    KC_G,                                        KC_H,    KC_J,    KC_K,    KC_L,    LT(MDIA, KC_SCLN), GUI_T(KC_QUOT),
   KC_LSFT,         KC_Z,        KC_X,          KC_C,    KC_V,    KC_B,    ALL_T(KC_NO),         MEH_T(KC_NO), KC_N,    KC_M,    KC_COMM, KC_DOT,           CTL_T(KC_SLSH), KC_RSFT,
-  LT(SYMB,KC_GRV), KC_QUOT,     LALT(KC_LSFT), KC_LEFT, KC_LGUI,                                              KC_UP,   KC_DOWN, KC_LBRC, KC_RBRC, TT(SYMB),
-                                                           ALT_T(KC_APP), KC_RGHT,                 KC_LALT, KC_BSPC,
+  LT(SYMB,KC_GRV), KC_QUOT,     KC_LSFT,       KC_LALT, KC_LGUI,                                              KC_ALGR,   KC_LALT, KC_LBRC, KC_RBRC, TT(SYMB),
+                                                                 KC_LEFT, KC_RGHT,                 KC_DOWN, KC_UP,
                                                                           KC_HOME,                 KC_PGUP,
                                                          KC_SPC, KC_BSPC, KC_END,                  KC_PGDN, KC_DEL, KC_ENT
 ),
